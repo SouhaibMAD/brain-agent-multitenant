@@ -1,0 +1,58 @@
+.inbox-shell {
+  display: flex;
+  height: 100%;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.inbox-list-pane {
+  width: 320px;
+  flex-shrink: 0;
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-elevated);
+}
+
+.inbox-filters {
+  display: flex;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.inbox-filter-btn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.inbox-filter-btn:hover {
+  color: var(--color-text);
+}
+
+.inbox-filter-btn.active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-bg);
+}
+
+.inbox-thread-pane {
+  flex: 1;
+  display: flex;
+  min-width: 0;
+}
+
+.inbox-empty-state {
+  margin: auto;
+  color: var(--color-text-tertiary);
+  font-size: var(--text-sm);
+}

@@ -1,0 +1,235 @@
+.tenants-admin-page {
+  padding: var(--space-6);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tenants-admin-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.tenants-admin-header h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  margin: 0 0 var(--space-1) 0;
+  color: var(--color-text);
+}
+
+.tenants-admin-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.tenants-admin-back {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tenants-admin-back:hover {
+  color: var(--color-text);
+}
+
+.tenants-admin-create,
+.tenants-admin-list {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.tenants-admin-create h2,
+.tenants-admin-list h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 400;
+  margin: 0 0 var(--space-4) 0;
+  color: var(--color-text);
+}
+
+.tenant-create-form {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.tenant-create-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.tenant-create-field label {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.tenant-create-field input {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  min-width: 220px;
+}
+
+.tenant-create-field input:focus {
+  border-color: var(--color-accent);
+}
+
+.tenant-create-submit {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  height: 38px;
+}
+
+.tenant-create-submit:hover:not(:disabled) {
+  background: var(--color-accent-strong);
+}
+
+.tenant-create-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tenant-create-error {
+  color: var(--color-alert);
+  font-size: var(--text-sm);
+  width: 100%;
+}
+
+.tenants-admin-loading {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.tenants-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.tenants-table th {
+  text-align: left;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tenants-table td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.tenant-row--inactive {
+  opacity: 0.5;
+}
+
+.tenant-row-slug {
+  font-family: var(--font-mono);
+  color: var(--color-text-secondary);
+}
+
+.tenant-status {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-xs);
+}
+
+.tenant-status--ok {
+  background: var(--color-accent-bg);
+  color: var(--color-accent-strong);
+}
+
+.tenant-status--warn {
+  background: var(--color-info-bg);
+  color: var(--color-info);
+}
+
+.tenant-status--alert {
+  background: var(--color-alert-bg);
+  color: var(--color-alert);
+}
+
+.tenant-row-actions {
+  text-align: right;
+}
+
+.tenant-deactivate-btn {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  cursor: pointer;
+}
+
+.tenant-deactivate-btn:hover:not(:disabled) {
+  border-color: var(--color-alert);
+  color: var(--color-alert);
+}
+
+.tenant-deactivate-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tenants-admin-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.tenants-admin-list-header h2 {
+  margin: 0;
+}
+
+.tenants-refresh-btn {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  cursor: pointer;
+}
+
+.tenants-refresh-btn:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.tenants-refresh-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.tenant-users-link {
+  color: var(--color-accent);
+  font-size: var(--text-xs);
+  text-decoration: none;
+  margin-right: var(--space-3);
+}
+
+.tenant-users-link:hover {
+  color: var(--color-accent-strong);
+}

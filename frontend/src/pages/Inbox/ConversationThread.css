@@ -1,0 +1,194 @@
+.thread {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.thread-loading,
+.thread-empty {
+  margin: auto;
+  color: var(--color-text-tertiary);
+  font-size: var(--text-sm);
+}
+
+.thread-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.thread-header-info {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.thread-customer {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.thread-channel {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.thread-header-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.thread-action-btn {
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text-secondary);
+}
+
+.thread-resume-btn {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.thread-resume-btn:hover:not(:disabled) {
+  background: var(--color-accent-bg);
+}
+
+.thread-action-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.thread-bot-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.thread-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.thread-message {
+  display: flex;
+  flex-direction: column;
+  max-width: 65%;
+}
+
+.thread-message-inbound {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.thread-message-outbound {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.thread-message-bubble {
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.thread-message-inbound .thread-message-bubble {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.thread-message-outbound .thread-message-bubble {
+  background: var(--color-accent-bg);
+  border: 1px solid var(--color-accent);
+  color: var(--color-text);
+}
+
+.thread-message-time {
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+  margin-top: 2px;
+  padding: 0 var(--space-1);
+}
+
+.thread-composer {
+  display: flex;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.thread-composer input {
+  flex: 1;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--text-base);
+  color: var(--color-text);
+}
+
+.thread-composer input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.thread-composer button {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.thread-composer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.thread-send-error {
+  font-size: var(--text-xs);
+  color: var(--color-alert);
+  padding: 0 var(--space-4) var(--space-2);
+  margin: 0;
+}
+
+.thread-message-image {
+  max-width: 260px;
+  max-height: 260px;
+  border-radius: var(--radius-sm);
+  display: block;
+  object-fit: cover;
+}
+
+.thread-message-text {
+  margin-top: var(--space-1);
+}
+
+.thread-message-bubble:has(.thread-message-image):not(:has(.thread-message-text)) {
+  padding: var(--space-1);
+}

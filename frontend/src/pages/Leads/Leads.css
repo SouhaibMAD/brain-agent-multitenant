@@ -1,0 +1,160 @@
+.leads-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.leads-filters {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-3);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.leads-filter-btn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.leads-filter-btn:hover {
+  color: var(--color-text);
+}
+
+.leads-filter-btn.active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: var(--color-accent-bg);
+}
+
+.leads-empty {
+  color: var(--color-text-tertiary);
+  font-size: var(--text-sm);
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.leads-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  overflow-y: auto;
+  display: block;
+  flex: 1;
+}
+
+.leads-table thead,
+.leads-table tbody {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.leads-table th {
+  text-align: left;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-text-tertiary);
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  font-weight: 500;
+}
+
+.leads-table td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leads-mono {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.lead-status-select {
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 2px var(--space-5) 2px var(--space-2);
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: inherit;
+  background-repeat: no-repeat;
+  background-position: right var(--space-1) center;
+  background-size: 10px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+.lead-status-select:hover {
+  border-color: var(--color-border);
+}
+
+.lead-status-select:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lead-status-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+/* Nouveau / En attente de confirmation — neutre, en cours */
+.lead-status-select.lead-status-nouveau,
+.lead-status-select.lead-status-en_attente_confirmation {
+  background-color: var(--color-info-bg);
+  color: var(--color-info);
+}
+
+/* Qualifié / Confirmé — positif, progression vers la conversion */
+.lead-status-select.lead-status-qualifie,
+.lead-status-select.lead-status-confirme {
+  background-color: var(--color-accent-bg);
+  color: var(--color-accent);
+}
+
+/* Transféré à un humain / Annulé — nécessite attention ou terminal négatif */
+.lead-status-select.lead-status-transfere_humain,
+.lead-status-select.lead-status-annule {
+  background-color: var(--color-alert-bg);
+  color: var(--color-alert);
+}
+
+.leads-view-conversation-btn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.leads-view-conversation-btn:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.leads-view-conversation-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

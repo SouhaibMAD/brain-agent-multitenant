@@ -1,0 +1,261 @@
+.tenant-users-page {
+  padding: var(--space-6);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tenant-users-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+}
+
+.tenant-users-header h1 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  margin: 0 0 var(--space-1) 0;
+  color: var(--color-text);
+}
+
+.tenant-users-subtitle {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  margin: 0;
+}
+
+.tenant-users-back {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tenant-users-back:hover {
+  color: var(--color-text);
+}
+
+.tenant-users-assign-section,
+.tenant-users-list-section {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.tenant-users-assign-section h2,
+.tenant-users-list-section h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-base);
+  font-weight: 400;
+  margin: 0 0 var(--space-4) 0;
+  color: var(--color-text);
+}
+
+.tenant-users-lookup-form,
+.tenant-users-confirm-form {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.tenant-users-confirm-form {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}
+
+.tenant-users-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.tenant-users-field label {
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+}
+
+.tenant-users-field input,
+.tenant-users-field select {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+  min-width: 220px;
+  height: 38px;
+}
+
+.tenant-users-field input:focus,
+.tenant-users-field select:focus {
+  border-color: var(--color-accent);
+}
+
+.tenant-users-lookup-btn,
+.tenant-users-assign-btn {
+  background: var(--color-accent);
+  color: var(--color-bg);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  height: 38px;
+}
+
+.tenant-users-lookup-btn:hover:not(:disabled),
+.tenant-users-assign-btn:hover:not(:disabled) {
+  background: var(--color-accent-strong);
+}
+
+.tenant-users-lookup-btn:disabled,
+.tenant-users-assign-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tenant-users-error {
+  color: var(--color-alert);
+  font-size: var(--text-sm);
+  margin-top: var(--space-3);
+}
+
+.tenant-users-found {
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  width: 100%;
+  margin-bottom: var(--space-1);
+}
+
+.tenant-users-badge-sa {
+  display: inline-block;
+  margin-left: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  background: var(--color-info-bg);
+  color: var(--color-info);
+  font-size: var(--text-xs);
+}
+
+.tenant-users-loading,
+.tenant-users-empty {
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+}
+
+.tenant-users-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.tenant-users-table th {
+  text-align: left;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tenant-users-table td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+.tenant-users-row-id {
+  font-family: var(--font-mono);
+  color: var(--color-text-secondary);
+  font-size: var(--text-xs);
+}
+
+.tenant-users-row-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.tenant-users-row-email {
+  color: var(--color-text);
+}
+
+.tenant-users-row-name {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
+
+.tenant-users-row-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tenant-users-row-select {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-2);
+  color: var(--color-text);
+  font-size: var(--text-sm);
+}
+
+.tenant-users-row-edit,
+.tenant-users-row-save,
+.tenant-users-row-cancel {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  margin-left: var(--space-2);
+}
+
+.tenant-users-row-edit:hover,
+.tenant-users-row-save:hover:not(:disabled) {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.tenant-users-row-cancel:hover {
+  border-color: var(--color-alert);
+  color: var(--color-alert);
+}
+
+.tenant-users-row-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tenant-users-row-error {
+  color: var(--color-alert);
+  font-size: var(--text-xs);
+  margin-top: var(--space-1);
+  text-align: right;
+}
+
+.tenant-users-row-remove {
+  background: transparent;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-1) var(--space-3);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  margin-left: var(--space-2);
+}
+
+.tenant-users-row-remove:hover:not(:disabled) {
+  border-color: var(--color-alert);
+  color: var(--color-alert);
+}
+
+.tenant-users-row-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

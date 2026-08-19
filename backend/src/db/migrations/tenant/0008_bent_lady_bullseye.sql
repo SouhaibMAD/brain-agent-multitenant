@@ -1,0 +1,1 @@
+ALTER TABLE "conversations" ADD COLUMN "bot_enabled" boolean DEFAULT true NOT NULL;

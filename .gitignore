@@ -1,0 +1,59 @@
+# Dependencies
+**/node_modules
+.pnp
+.pnp.js
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Build outputs
+dist/
+build/
+**/dist
+**/build
+frontend/dist
+
+# Neon / DB local state
+.neon
+**/.neon
+
+# Logs
+*.log
+logfiles.txt
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Secrets / credentials (should never be committed)
+credentials.txt
+content_credentials.txt
+
+# Test/scratch data files (adjust if these should be tracked)
+test_invalid.csv
+test_reject.csv
+test_replace.csv
+template_test.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Backend artifacts
+backend/server.bak
+
+# Misc project notes (adjust if these should be tracked/removed from repo)
+plan_zod.txt
+zod.txt

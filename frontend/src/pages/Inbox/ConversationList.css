@@ -1,0 +1,108 @@
+.conversation-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.conversation-list-empty {
+  padding: var(--space-5);
+  color: var(--color-text-tertiary);
+  font-size: var(--text-sm);
+  text-align: center;
+}
+
+.conversation-item {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-standard);
+}
+
+.conversation-item:hover {
+  background: var(--color-bg-hover);
+}
+
+.conversation-item.active {
+  background: var(--color-accent-bg);
+}
+
+.conversation-item-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.conversation-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.conversation-item-identifier {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.conversation-item-time {
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  flex-shrink: 0;
+}
+
+.conversation-item-preview {
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+/* Status dot — le "pouls" : signature visuelle du produit.
+   Un seul endroit animé, justifié par le contenu (l'agent IA "vit"). */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.status-dot-alive {
+  background: var(--color-accent);
+  box-shadow: 0 0 0 0 var(--color-accent-bg);
+  animation: pulse 2.2s var(--ease-standard) infinite;
+}
+
+.status-dot-handover {
+  background: var(--color-alert);
+}
+
+.status-dot-lead {
+  background: var(--color-info);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(124, 152, 133, 0.35);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(124, 152, 133, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(124, 152, 133, 0);
+  }
+}
